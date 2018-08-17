@@ -5,11 +5,13 @@
 # below each fixture, per the syntax in the comments below
 #
 
-one: 
+# column: value
+one:
+  first_name: cloud
+  last_name: strife
+  phone_number: 3121234567
   email: sx@io.com
   encrypted_password: password
 
-# column: value
-#
-two: {}
-# column: value
+
+
