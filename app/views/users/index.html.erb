@@ -1,0 +1,15 @@
+<%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
+
+<h1>This is the Index-Page for Users</h1>
+
+<ul>
+  <%- @users.each do |u| %>
+    <li>
+      <%= u.first_name %>
+      <%= u.last_name %>
+    </li>
+  <% end %>
+</ul>
+
+<%= link_to "Edit Profile", edit_user_path(current_user.id) %>
+<%= link_to "Back to home", :root %>
