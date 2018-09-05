@@ -1,0 +1,11 @@
+<header><h1>This is the show-page</h1></header>
+
+<%= link_to 'Add place', new_address_path %>
+
+<div>
+  <ul>
+    <%= render @address %>
+  </ul>
+</div>
+
+<%= link_to "Back", :back %>

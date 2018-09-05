@@ -6,6 +6,18 @@ ruby '2.5.1'
 # Devise gem
 gem 'devise'
 
+# Geocoder gem
+gem 'geocoder'
+
+# Enable variants to process images
+gem 'image_processing', '~> 1.2'
+
+# Bootstrap and every gem required to make it work
+# gem 'bootstrap', '~> 4.1.3'
+# gem 'sprockets-rails', :require => 'sprockets/railtie'
+# gem 'jquery-rails'
+# gem 'popper_js', '~> 1.14.3'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.0'
 # Use sqlite3 as the database for Active Record
@@ -31,7 +43,7 @@ gem 'jbuilder', '~> 2.5'
 # gem 'bcrypt', '~> 3.1.7'
 
 # Use ActiveStorage variant
-# gem 'mini_magick', '~> 4.8'
+gem 'mini_magick', '~> 4.8'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
