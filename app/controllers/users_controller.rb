@@ -14,10 +14,14 @@ class UsersController < ApplicationController
     end
   end
 
+  def edit
+    @user = User.find(params[:id])
+  end
+
   private
 
   def validate_current_user
-    current_user ? current_user == params[:id].to_i : :root
+    redirect_to root_path unless current_user.id == params[:id].to_i
   end
 
   def user_params
@@ -26,7 +30,7 @@ class UsersController < ApplicationController
       :last_name,
       :phone_number,
       :avatar,
-      address_attributes: [:id, :street, :city, :state, :country, :zip_code]
+      addresses_attributes: [:id, :street, :city, :state, :country, :zip_code]
     )
   end
 end

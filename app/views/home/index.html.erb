@@ -1,7 +1,9 @@
 <%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
 
 <h1> Welcome <%= current_user.first_name%> </h1>
-<%= image_tag(current_user.avatar.variant(resize:"200x200"))%>
+<% if current_user.avatar.attached? %>
+  <%= image_tag current_user.avatar.variant(resize:"200x200") %>
+<%end%>
 
 <br>
 
