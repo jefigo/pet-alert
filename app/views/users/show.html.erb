@@ -3,5 +3,7 @@
 <h1>This is the Show-Page for User</h1>
 <%= current_user.first_name %>
 </br>
-<%= link_to "Edit Profile", edit_user_path(current_user.id) %>
+
+<%= link_to "Edit Profile", edit_user_path(current_user) %>
+<%= link_to "Manage Address", user_addresses_path(current_user) %></br>
 <%= link_to "Back to home", :root %>

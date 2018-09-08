@@ -1,6 +1,6 @@
 <h2>Add your address here --- is this always visible?</h2>
 
-<%= form_for @address do |f| %>
+<%= form_for @address, url: user_addresses_path(@user) do |f| %>
   <% if @address.errors.any? %>
     <h2>
     <div id="error_explanation">

@@ -1,3 +1,4 @@
 <h1>This is the index-page</h1>
-<%= render partial: "address" %>
-<%= link_to 'Click here to add a new location', new_address_path %>
+<%= link_to "Add New Addresses", new_user_address_path(@user) %></br>
+<%= link_to "Show Profile", user_path(current_user.id) %>
+<%= render partial: "address", collection: @addresses %>

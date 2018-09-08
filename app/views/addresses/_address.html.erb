@@ -1,10 +1,23 @@
 <ul>
-  <%- @addresses.each do |a| %>
-    <li>
-      <%= a.country %>
-      <%= a.city %>
-      <%= a.state %>
-      <%= a.street %>
-    </li>
-  <% end %>
+  <li>
+    <%= address.country %>
+  </li>
+  <li>
+    <%= address.state %>
+  </li>
+  <li>
+    <%= address.city%>
+  </li>
+  <li>
+    <%= address.street%>
+  </li>
+  <li>
+    <%= address.zip_code%>
+  </li>
+  <li>
+    <%= address.latitude%>
+  </li>
+  <li>
+    <%= address.longitude%>
+  </li>
 </ul>

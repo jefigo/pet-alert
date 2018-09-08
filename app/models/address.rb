@@ -17,9 +17,16 @@
 class Address < ApplicationRecord
   geocoded_by :full_address
   before_save :geocode
-  validates :user, :street, :city, :state, :zip_code, presence: true
+  validates :city,
+            :state,
+            :street,
+            :user_id,
+            :zip_code,
+            presence: true
+
+  belongs_to :user
 
   def full_address
-    [street, city, state, zip_code].compact.join(', ')
+    [city, state, street, zip_code].compact.join(', ')
   end
 end

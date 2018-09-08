@@ -26,9 +26,12 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-  validates :first_name, :last_name, :phone_number, :avatar, presence: true
-  has_one_attached :avatar
+  validates :first_name,
+            :last_name,
+            :phone_number,
+            :avatar,
+            presence: true
 
-  has_one :address
-  accepts_nested_attributes_for :address
+  has_one_attached :avatar
+  has_many :addresses
 end

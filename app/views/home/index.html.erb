@@ -7,7 +7,4 @@
 
 <br>
 
-<div class="col-sm-3">
-  <%= link_to "Edit Profile", edit_user_path(current_user.id) %>
-  <%= link_to "Index Users", users_path(:index) %>
-</div>
+<%= link_to "Show Profile", user_path(current_user.id) %>
